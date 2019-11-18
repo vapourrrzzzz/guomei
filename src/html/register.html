@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- 重置文件 -->
+    <link rel="stylesheet" href="../less/normalize.css">
+    <link rel="stylesheet" href="../less/register.css">
+    <title>注册</title>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/require.js" data-main="../js/main.register.js"></script>
+</head>
+
+<body>
+    <header id="header">
+        <div id="logo">
+            <a href="./index.html"></a>
+            <div class="remind">
+                <p>我已注册，现在就<a href="./login.html">登陆</a></p>
+            </div>
+        </div>
+    </header>
+    <div class="reg_div">
+        <p>注册</p>
+        <ul class="reg_ul">
+            <li>
+                <span>用户名：</span>
+                <input id="username" type="text" name="username" value="" placeholder="4-8位用户名" class="reg_user">
+                <span class="user_hint"></span>
+            </li>
+            <li>
+                <span>设置密码：</span>
+                <input id="password" type="password" name="password" value="" placeholder="6-16位密码"
+                    class="reg_password">
+                <span class="password_hint"></span>
+            </li>
+            <li>
+                <span>确认密码：</span>
+                <input type="password" name="" value="" placeholder="确认密码" class="reg_confirm">
+                <span class="confirm_hint"></span>
+            </li>
+            <li>
+                <span>邮箱：</span>
+                <input id="email" type="text" name="email" value="" placeholder="邮箱" class="reg_email">
+                <span class="email_hint"></span>
+            </li>
+            <li>
+                <span>手机号码：</span>
+                <input id="phone" type="email" name="phone" value="" placeholder="手机号" class="reg_mobile">
+                <span class="mobile_hint"></span>
+            </li>
+            <li>
+                <button type="button" name="button" class="red_button reg">注册</button>
+            </li>
+        </ul>
+    </div>
+    <script src='https://libs.baidu.com/jquery/1.10.2/jquery.min.js'></script>
+    <script src="../js/JavaScript.js"></script>
+</body>
+
+</html>

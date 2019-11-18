@@ -1,0 +1,212 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #888;
+    &:hover{
+        color: #f5004b;
+    }
+}
+// 清除浮动
+.clear::after{
+    content: '';
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    clear: both;
+    display: block;
+}
+// header
+#header{
+    width: 100%;
+    height: 120px;
+    border-bottom: 1px solid #dd00a7;
+    #logo{
+        width: 990px;
+        margin: 0 auto;
+        // padding: 33px 0;
+        height: 120px;
+        >a{
+            display: inline-block;
+            width: 283px;
+            height: 120px;
+            background: url(../img/img-login/loginlogo.png) no-repeat 0 33px;
+        }
+        .remind{
+            float: right;
+            margin-top: 95px;
+            a{
+                font: 12px/1.5 Arial,simsun;  
+                padding: 0 20px;   
+                color: #888; 
+                background: url('../img/img-login/sprite.png') no-repeat 0px -257px ;
+            }
+            a:hover{
+                text-decoration: underline;
+                color: #f5004b;
+            }
+        } 
+    }
+      
+}
+// 登录页面
+#login{
+    width: 100%;
+    height: 480px;
+    background:#fff1e8;
+    overflow: hidden;
+    >p{
+        color: #ff7f23;
+        font: 400 12px/29px "Microsoft Yahei";
+        background-color: #fff4e3;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .login-main{
+        width: 990px;
+        margin: 0 auto;
+        height: 100%;
+        background: url('../img/img-login/background.jpg') no-repeat -136px -26px;
+        position: relative;
+        #tabs{
+            width: 350px;
+            height: 381px;
+            background-color: #fff;
+            position: absolute;
+            right: 10px;
+            top: 20px;
+            >div{
+                display: none;
+            }
+            .show{
+                display: block;
+            }
+            >ul{
+                width: 100%;
+                height: 55px;
+                border-bottom: 1px solid #f4f4f4;
+                li{
+                    width: 50%;
+                    height: 100%;
+                    line-height: 55px;
+                    text-align: center;
+                    float: left;
+                    font-size: 20px;
+                    cursor: pointer;
+                }
+                .actived{
+                    color: red;
+                }
+            }
+            .first{
+                #form{
+                    width: 340px;
+                    float: right;
+                    background: #fff;
+                    margin-top: 20px;
+                    .title{
+                        text-align: center;
+                        color: #f5004b;
+                        font-size: 18px;
+                    }
+                    #username,#password{
+                        width: 300px;
+                        height: 40px;
+                        display: block;
+                        margin: 20px 0 0 20px;
+                        outline: none;
+                        line-height: 20px;
+                        font-size: 14px;
+                        padding-left: 15px;
+                    }
+                    .clear{
+                        margin-top: 10px;
+                    }
+                   .save{
+                       float: left;
+                       font: 12px/1.5 Arial,simsun;
+                       margin-left: 20px;
+                       line-height: 24px;
+                       input{
+                           vertical-align: middle;
+                       }
+                   }
+                   .forget{
+                       float: right;
+                       font-size: 14px;
+                       a{
+                           padding: 0 15px;
+                           font-size: 12px;
+                       }
+                       a:last-of-type{
+                           color: #2875cc;
+                           margin-right: 20px;
+                       }
+                   }
+                   .btn{
+                        width: 300px;
+                        height: 42px;
+                        display: block;
+                        margin: 20px ;
+                        color: #fff;
+                        background:#ff5757;
+                        font-size: 20px; 
+                        border: none;
+                        cursor: pointer;
+                   }
+                }
+            }
+            .second{
+                box-sizing: border-box;
+                padding: 25px;
+                text-align: center;
+                color: #5e5e5e;
+                font-size: 12px;
+                text-align: center;
+                line-height: 20px;
+                img{
+                    border: 1px solid #f4f4f4;
+                    margin-bottom: 10px;
+                }
+                p>a{
+                    color: #ff5757;
+                }
+                >a{
+                    text-align: right;
+                    display: block;
+                }
+            }
+        }
+    }
+}
+// footer
+#footer{
+    margin-top: 50px;
+    .statement{
+        width: 1170px;
+        margin: 0 auto;
+        padding-top: 20px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #e6e6e6;
+        border-top: 1px solid #e6e6e6;
+        p{
+            line-height: 30px;
+            color: #888;
+            >a{
+                display: inline-block;
+                font-size: 14px;
+                color: #666;
+                padding-left: 5px;
+                &:hover{
+                    color: #f5004b;
+                }
+            }
+        }
+    }
+}

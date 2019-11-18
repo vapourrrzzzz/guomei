@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #888;
+}
+a:hover {
+  color: #f5004b;
+}
+.clear::after {
+  content: '';
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  clear: both;
+  display: block;
+}
+#header {
+  width: 100%;
+  height: 120px;
+  border-bottom: 1px solid #dd00a7;
+}
+#header #logo {
+  width: 990px;
+  margin: 0 auto;
+  height: 120px;
+}
+#header #logo > a {
+  display: inline-block;
+  width: 283px;
+  height: 120px;
+  background: url(../img/img-login/loginlogo.png) no-repeat 0 33px;
+}
+#header #logo .remind {
+  float: right;
+  margin-top: 95px;
+}
+#header #logo .remind a {
+  font: 12px/1.5 Arial, simsun;
+  padding: 0 20px;
+  color: #888;
+  background: url('../img/img-login/sprite.png') no-repeat 0px -257px;
+}
+#header #logo .remind a:hover {
+  text-decoration: underline;
+  color: #f5004b;
+}
+#login {
+  width: 100%;
+  height: 480px;
+  background: #fff1e8;
+  overflow: hidden;
+}
+#login > p {
+  color: #ff7f23;
+  font: 400 12px/29px "Microsoft Yahei";
+  background-color: #fff4e3;
+  margin: 0 auto;
+  text-align: center;
+}
+#login .login-main {
+  width: 990px;
+  margin: 0 auto;
+  height: 100%;
+  background: url('../img/img-login/background.jpg') no-repeat -136px -26px;
+  position: relative;
+}
+#login .login-main #tabs {
+  width: 350px;
+  height: 381px;
+  background-color: #fff;
+  position: absolute;
+  right: 10px;
+  top: 20px;
+}
+#login .login-main #tabs > div {
+  display: none;
+}
+#login .login-main #tabs .show {
+  display: block;
+}
+#login .login-main #tabs > ul {
+  width: 100%;
+  height: 55px;
+  border-bottom: 1px solid #f4f4f4;
+}
+#login .login-main #tabs > ul li {
+  width: 50%;
+  height: 100%;
+  line-height: 55px;
+  text-align: center;
+  float: left;
+  font-size: 20px;
+  cursor: pointer;
+}
+#login .login-main #tabs > ul .actived {
+  color: red;
+}
+#login .login-main #tabs .first #form {
+  width: 340px;
+  float: right;
+  background: #fff;
+  margin-top: 20px;
+}
+#login .login-main #tabs .first #form .title {
+  text-align: center;
+  color: #f5004b;
+  font-size: 18px;
+}
+#login .login-main #tabs .first #form #username,
+#login .login-main #tabs .first #form #password {
+  width: 300px;
+  height: 40px;
+  display: block;
+  margin: 20px 0 0 20px;
+  outline: none;
+  line-height: 20px;
+  font-size: 14px;
+  padding-left: 15px;
+}
+#login .login-main #tabs .first #form .clear {
+  margin-top: 10px;
+}
+#login .login-main #tabs .first #form .save {
+  float: left;
+  font: 12px/1.5 Arial, simsun;
+  margin-left: 20px;
+  line-height: 24px;
+}
+#login .login-main #tabs .first #form .save input {
+  vertical-align: middle;
+}
+#login .login-main #tabs .first #form .forget {
+  float: right;
+  font-size: 14px;
+}
+#login .login-main #tabs .first #form .forget a {
+  padding: 0 15px;
+  font-size: 12px;
+}
+#login .login-main #tabs .first #form .forget a:last-of-type {
+  color: #2875cc;
+  margin-right: 20px;
+}
+#login .login-main #tabs .first #form .btn {
+  width: 300px;
+  height: 42px;
+  display: block;
+  margin: 20px ;
+  color: #fff;
+  background: #ff5757;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+}
+#login .login-main #tabs .second {
+  box-sizing: border-box;
+  padding: 25px;
+  color: #5e5e5e;
+  font-size: 12px;
+  text-align: center;
+  line-height: 20px;
+}
+#login .login-main #tabs .second img {
+  border: 1px solid #f4f4f4;
+  margin-bottom: 10px;
+}
+#login .login-main #tabs .second p > a {
+  color: #ff5757;
+}
+#login .login-main #tabs .second > a {
+  text-align: right;
+  display: block;
+}
+#footer {
+  margin-top: 50px;
+}
+#footer .statement {
+  width: 1170px;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e6e6e6;
+  border-top: 1px solid #e6e6e6;
+}
+#footer .statement p {
+  line-height: 30px;
+  color: #888;
+}
+#footer .statement p > a {
+  display: inline-block;
+  font-size: 14px;
+  color: #666;
+  padding-left: 5px;
+}
+#footer .statement p > a:hover {
+  color: #f5004b;
+}
