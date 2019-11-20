@@ -12,7 +12,7 @@ define(['jquery'], function ($) {
                     res.forEach(function (value, index) {
                         var obj=JSON.parse(value.pic);
                         temp += `
-                        <a href="#">
+                        <a href="${baseUrl}/src/html/detail.html?id=${value.id}">
                             <img src="../${obj[1].src}" alt="${obj[1].title}">
                             <p>${value.title}</p>
                             <p><span>￥</span>${value.price}</p>

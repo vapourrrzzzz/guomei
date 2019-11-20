@@ -1364,39 +1364,103 @@
     <div style="clear: both;"></div>
   </div>
 
-  <!-- 安全保障 -->
-  <section id="security">
-    <div class="security-content">
-      <ul class="security-title">
-        <li>
-          <a href="">品质</a>
-          <span></span>
-          <a href="">正品行货，购物无忧</a>
-        </li>
-        <li>
-          <a href="">品质</a>
-          <span></span>
-          <a href="">正品行货，购物无忧</a>
-        </li>
-        <li>
-          <a href="">品质</a>
-          <span></span>
-          <a href="">正品行货，购物无忧</a>
-        </li>
+ <!-- 安全保障 -->
+ <section id="security" class="clear">
+  <div class="security-content">
+    <ul class="security-title">
+      <li>
+        <a href="">品质</a>
+        <span></span>
+        <a href="">正品行货，购物无忧</a>
+      </li>
+      <li>
+        <a href="">品质</a>
+        <span></span>
+        <a href="">正品行货，购物无忧</a>
+      </li>
+      <li>
+        <a href="">品质</a>
+        <span></span>
+        <a href="">正品行货，购物无忧</a>
+      </li>
+    </ul>
+    <!-- 详细说明 -->
+    <div class="specification">
+      <ul>
+        <li>物流配送</li>
+        <li><a href="">配送查询</a></li>
+        <li><a href="">配送服务</a></li>
+        <li><a href="">配送费用</a></li>
+        <li><a href="">配送时效</a></li>
+        <li><a href="">签收与验货</a></li>
       </ul>
-      <!-- 详细说明 -->
-      <div class="specification">
-
-      </div>
+      <ul>
+        <li>物流配送</li>
+        <li><a href="">配送查询</a></li>
+        <li><a href="">配送服务</a></li>
+        <li><a href="">配送费用</a></li>
+        <li><a href="">配送时效</a></li>
+        <li><a href="">签收与验货</a></li>
+      </ul>
+      <ul>
+        <li>物流配送</li>
+        <li><a href="">配送查询</a></li>
+        <li><a href="">配送服务</a></li>
+        <li><a href="">配送费用</a></li>
+        <li><a href="">配送时效</a></li>
+        <li><a href="">签收与验货</a></li>
+      </ul>
+      <ul>
+        <li>物流配送</li>
+        <li><a href="">配送查询</a></li>
+        <li><a href="">配送服务</a></li>
+        <li><a href="">配送费用</a></li>
+        <li><a href="">配送时效</a></li>
+        <li><a href="">签收与验货</a></li>
+      </ul>
+      <ul>
+        <li>物流配送</li>
+        <li><a href="">配送查询</a></li>
+        <li><a href="">配送服务</a></li>
+        <li><a href="">配送费用</a></li>
+        <li><a href="">配送时效</a></li>
+        <li><a href="">签收与验货</a></li>
+      </ul>
     </div>
+  </div>
   </section>
-
-
-
   <!-- foot -->
-  <section>
-
-  </section>
+  <footer id="footer" class="clear">
+  <!-- 服务 -->
+  <div class="serve clear">
+    <ul>
+      <li>
+        <p>门店服务</p>
+        <a href="">全国共计2000家门店</a>
+      </li>
+      <li>
+        <p>门店服务</p>
+        <a href="">全国共计2000家门店</a>
+      </li>
+    </ul>
+  </div>
+  <!-- 声明 -->
+  <div class="statement ">
+    <p>
+    <a href="">国美控股集团</a>
+    <a href="">国美管家</a>
+    <a href="">关于国美</a>
+    <a href="">加入我们</a>
+    <a href="">品牌大全</a>
+    <a href="">商品专题</a>
+    <a href="">热门搜索</a>
+    <a href="">风险监测</a></p>
+    <p>本公司游戏产品适合18岁以上成年人使用  违法和不良信息举报电话：021-39900132  互联网药品信息服务资格证编号（沪）-经营性-2019-0006</p>
+    <p>网络食品销售第三方平台提供者备案：沪网食备A0015号  网络文化经营许可证沪网文[2017]5537-436号  增值电信业务经营许可证</p>
+    <p>客服电话:4008113333  沪ICP备11009419号/京ICP备 19011786号  京B2-20191290  经营执照  营业执照  出版物经营许可证</p>
+    <p>©2000-2019  国美在线电子商务有限公司版权所有  京公网安备 11010502038379号</p>
+  </div>
+  </footer>
 
   <script src="https://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
   <script src="../js/jquery.SuperSlide.2.1.3.js" type="text/javascript" charset="utf-8"></script>
@@ -1406,49 +1470,7 @@
     //图片轮播
     $(".scroll-banner").slide({ mainCell: ".scroll-content", titCell: ".scroll-btn span", titOnClassName: "current", effect: "fold", autoPlay: true, delayTime: 1000, interTime: 3500 });
   </script>
-  <script>
-    $(function () {
-      $(window).scroll(function () {
-        //滚动730px，左侧导航固定定位
-        if ($(window).scrollTop() > 580) {
-          $('.fl_l').css({
-            'display': 'block',
-            'position': 'fixed',
-            'top': 100,
-            'left': 40
-          })
-        } else {
-          $('.fl_l').css({ 'display': 'none' })
-        };
-        $('.fl_l>li').eq(0).addClass('active');
-        //滚动到标杆位置,左侧导航加active
-        $('.fl_r>li').each(function () {
-          var _target = parseInt($(this).offset().top - $(window).scrollTop());
-          var _i = $(this).index();
-          if (_target <= 0) {
-            $('.fl_l>li').removeClass('active');
-            $('.fl_l>li').eq(_i).addClass('active');
-          }
-          //如果到达页面底部，给左侧导航最后一个加active
-          else if ($(document).height() == $(window).scrollTop() + $(window).height()) {
-            $('.fl_l>li').removeClass('active');
-            $('.fl_l>li').eq($('.fl_r>li').length - 1).addClass('active');
-          }
-        });
-      });
-
-      $('.fl_l>li>a').on('click', function () {
-        $(this.parentNode).addClass('active');
-        $(this.parentNode).siblings().removeClass('active');
-        var _i = $('.fl_l>li>a').index(this);
-        console.log($('.fl_l>li>a'))
-        var top = $('.fl_r>li').eq(_i).offset().top;
-        $('html,body').animate({
-          'scrollTop': top
-        }, 500)
-      })
-    });
-  </script>
+  <script src="../js/louti.js"></script>
 </body>
 
 </html>

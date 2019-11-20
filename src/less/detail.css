@@ -16,10 +16,10 @@ a:hover {
 .clear::after {
   content: '';
   height: 0;
-  display: block;
-  visibility: hidden;
   overflow: hidden;
+  visibility: hidden;
   clear: both;
+  display: block;
 }
 #header {
   width: 100%;
@@ -137,94 +137,155 @@ a:hover {
 #search .search-main .shopping-car > a:hover {
   text-decoration: underline;
 }
-.box {
-  margin: 0 auto;
+.product-bc {
+  height: 120px;
   width: 1200px;
+  margin: 0 auto;
+  background: url(../img/bgc.webp) no-repeat;
+  background-size: 100% ;
+}
+#nav {
+  width: 100%;
+  height: 30px ;
+  background-color: #be0e34;
+}
+#nav .product-nav {
+  width: 1170px;
+  margin: 0 auto;
+  text-align: center;
+}
+#nav .product-nav a {
+  display: inline-block;
+  padding: 0 20px;
+  text-align: center;
+  color: #fff;
+  line-height: 30px;
+}
+#nav .product-nav a:hover {
+  background: #950222;
+}
+.fdj {
+  width: 1170px;
+  margin: 20px auto;
+}
+.fdj .fdj_left {
+  float: left;
+}
+.fdj .scale {
   position: relative;
 }
-.fl_l {
-  width: 64px;
-  float: left;
-  border: 1px solid #f4f4f4;
-  background: #fff;
+.fdj .scale .small {
+  width: 452px;
+  height: 452px;
+  border: 1px solid #ccc;
+  position: relative;
+}
+.fdj .scale .small .movebox {
+  position: absolute;
+  z-index: 11;
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+  cursor: move;
+  border: 1px solid #ccc;
   display: none;
 }
-.fl_l li a {
-  border-bottom: 1px solid #eee;
-  text-align: center;
-  display: block;
-  color: #333;
-  font-size: 12px;
-}
-.fl_l li.active a {
-  background: #f60;
-  color: #fff;
-}
-.fl_r {
-  float: left;
-  width: 100%;
-}
-.fl_r > li {
-  width: 100%;
-  margin: 0 20px;
-  background: #fff;
-  display: block;
+.fdj .big {
+  width: 500px;
+  height: 500px;
+  border: 1px solid #ccc;
   overflow: hidden;
+  margin-left: 4px;
+  display: none;
+  position: absolute;
+  left: 450px;
+  top: 0;
 }
-.fl_r .top {
-  margin-top: 20px;
-  width: 100%;
+.fdj .big .bigpic {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.fdj .show {
+  display: block !important;
+}
+.fdj .hide {
+  display: none;
+}
+.fdj .list {
   overflow: hidden;
+  margin-top: 15px;
 }
-.fl_r .top h2 {
+.fdj .list li {
   float: left;
-  font-size: 20px;
-}
-.fl_r .top ul {
-  float: right;
-}
-.fl_r .top ul li {
-  float: left;
-  font-size: 14px;
   cursor: pointer;
-  margin: 0 10px;
-  height: 30px;
-  padding: 5px 10px;
+  margin-left: 10px;
+  border: 1px solid transparent;
 }
-.fl_r .top ul li:hover {
-  background-color: #719ef7;
+.fdj .list li:first-of-type {
+  border: 1px solid red;
 }
-.fl_r .left {
+.fdj .fdj_right {
   float: left;
+  margin-left: 20px;
 }
-.fl_r .right {
-  float: right;
-  width: 800px;
+.fdj .fdj_right > h2 {
+  width: 500px;
+  font-size: 16px;
+  line-height: 26px;
+  color: #5e5e5e;
+  font-weight: 600;
+  padding-top: 5px;
 }
-.fl_r .right a {
-  float: left;
-  width: 198px;
-  height: 235px;
-  padding: 15px;
-  text-align: center;
-  transition: transform 0.3s;
+.fdj .fdj_right h3 {
+  font-size: 14px;
+  margin-top: 15px;
 }
-.fl_r .right a:hover {
-  transform: translateY(-5px);
-}
-.fl_r .right a img {
-  width: 130px;
-  height: 130px;
-  margin: 20px 0 15px 34px;
-}
-.fl_r .right a p {
-  margin-bottom: 10px;
+.fdj .fdj_right > p {
+  color: #888;
   font-size: 12px;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-  overflow: hidden;
-  height: 30px;
+  line-height: 20px;
+  margin-top: 50px;
+}
+.fdj .fdj_right > p > span {
+  font-family: Arial;
+  font-size: 24px;
+  color: #e3101e;
+  font-weight: 700;
+  margin-right: 10px;
+}
+.fdj .fdj_right > p span:first-of-type {
+  font-size: 16px;
+  font-style: normal ;
+}
+.fdj .fdj_right > p a {
+  color: blue;
+}
+.fdj .fdj_right > p a:hover {
+  text-decoration: underline;
+}
+.fdj .fdj_right > p > em {
+  color: #000;
+  font-size: 16px;
+  margin-right: 2px;
+  font-style: normal;
+}
+.fdj .fdj_right > p b {
+  color: #000;
+}
+.fdj .fdj_right > button {
+  display: block;
+  width: 100px;
+  height: 50px;
+  background: #e3101e;
+  color: #FFF;
+  margin-left: 30px;
+  margin-top: 50px;
+  border: none;
+  cursor: pointer;
 }
 #security {
   margin-top: 100px ;

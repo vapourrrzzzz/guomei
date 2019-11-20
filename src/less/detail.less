@@ -16,10 +16,10 @@ a{
 .clear::after{
     content: '';
     height: 0;
-    display: block;
-    visibility: hidden;
     overflow: hidden;
+    visibility: hidden;
     clear: both;
+    display: block;
 }
 #header{
     width: 100%;
@@ -144,101 +144,175 @@ a{
         }
     }
 }
-
-.box{
-    margin: 0 auto;
+.product-bc{
+    height: 120px;
     width: 1200px;
-    position: relative;
+    margin: 0 auto;
+    background: url(../img/bgc.webp) no-repeat;
+    background-size: 100% ;
 }
-.fl_l{
-    width: 64px;
-    float: left;
-    border: 1px solid #f4f4f4;
-    background: #fff;
-    display: none;
-}
-.fl_l li a{
-    border-bottom: 1px solid #eee;
-    text-align: center;
-    display: block;
-    color: #333;
-    font-size: 12px;
-    // line-height: 60px;
-}
-.fl_l li.active a{
-    background: #f60;
-    color: #fff;
-}
-.fl_r{
-    float: left;
+#nav{
     width: 100%;
-    >li{
-        width: 100%;
-        margin: 0 20px;
-        background: #fff;
-        display: block;
-        overflow: hidden;
-    }
-    .top{
-        margin-top: 20px;
-        width: 100%;
-        overflow: hidden;
-        h2{
-            float: left;
-            font-size: 20px;
+    height:30px ;
+    background-color: #be0e34;
+    .product-nav{
+        width: 1170px;
+        margin: 0 auto;
+        text-align: center;
+        a{
+            display: inline-block;
+            padding: 0 20px;
+            text-align: center;
+            color: #fff;
+            line-height: 30px;
         }
-        ul{
-            float: right;
-            li{
-                float: left;
-                font-size: 14px;
-                cursor: pointer;
-                margin: 0 10px;
-                height: 30px;   
-                // line-height: 30px;
-                padding: 5px 10px;
-                &:hover{
-                    background-color: #719ef7;
-                }
-            }
+        a:hover{
+            background: #950222;
         }
     }
-    .left{
+}
+
+// 放大镜
+.fdj{
+    width: 1170px;
+    margin: 20px auto;
+    .fdj_left{
         float: left;
     }
-    .right{
-        float: right;
-        width: 800px;
-        a{
+    .scale {
+        position: relative;
+        .small {
+            width: 
+            452px;
+            height: 
+            452px;
+            // float: left;
+            border: 1px solid #ccc;
+            position: relative;
+            // .smallpic{
+            //     display: block;
+            // }
+            .movebox {
+                position: absolute;
+                z-index: 11;
+                width: 100px;
+                height: 100px; 
+                background-color: orange;
+                opacity: .3;
+                top: 0;
+                left: 0;
+                cursor: move;
+                border: 1px solid #ccc;
+                display: none;
+            }
+        }
+    
+    }
+    .big {
+        width: 500px;
+        height: 500px;
+        border: 1px solid #ccc;
+        overflow: hidden;
+        margin-left: 4px;
+        display: none;
+        position: absolute;
+        left:450px; 
+        top: 0;
+        .bigpic {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+    .show {
+        display: block !important;
+    }
+    
+    .hide {
+        display: none;
+    }
+    .list{
+        // width:450px;
+        overflow: hidden;
+        margin-top: 15px;
+        li{
             float: left;
-            width: 198px;
-            height: 235px;
-            padding: 15px;
-            text-align: center;
-            transition: transform 0.3s;
-            &:hover{
-                transform: translateY(-5px);
-                // box-shadow: 0px 0px 5px #ccc;
-            }
-            img{
-                width: 130px;
-                height: 130px;
-                margin: 20px 0 15px 34px;
-            }
-            p{
-                margin-bottom: 10px;
-                font-size: 12px;
-                display: -webkit-box;
-                -webkit-box-orient: vertical;
-                -webkit-line-clamp: 3;
-                overflow: hidden;
-                height:30px;
-            }
+            cursor: pointer;
+            margin-left: 10px;
+            border: 1px solid transparent;
+        }
+        li:first-of-type{
+            border: 1px solid red;
         }
     }
 
+    .fdj_right{
+        float: left;
+            margin-left: 20px;
+            >h2{
+                width: 500px;
+                font-size: 16px;
+                line-height: 26px;
+                color: #5e5e5e;
+                font-weight: 600;
+                padding-top: 5px;
+            }
+            h3{
+                font-size: 14px;
+                margin-top: 15px;
+            }
+            >p{
+                color: #888;
+                font-size: 12px;
+                line-height: 20px;
+                margin-top: 50px;
+                >span{
+                    // display: block;
+                    font-family: Arial;
+                    font-size: 24px;
+                    color: #e3101e;
+                    font-weight: 700;
+                    margin-right: 10px;
+                }
+                span:first-of-type{
+                    font-size: 16px;
+                    font-style:normal ;
+                }
+                a{
+                    color: blue;
+                }
+                a:hover{
+                    text-decoration: underline;
+                }
+                >em{
+                    // display: block;
+                    // float: left;
+                    color: #000;
+                    font-size: 16px;
+                    margin-right: 2px;
+                    font-style: normal;
+                }
+                b{
+                    color: #000;
+                }
+            }
+            >button{
+                display: block;
+                width: 100px;
+                height: 50px;
+                background: #e3101e;
+                color: #FFF;
+                margin-left: 30px;
+                margin-top: 50px;
+                border: none;
+                cursor: pointer;
+            }
+    }
 }
 
+
+
+// 安全说明
 #security{
     margin-top:100px ;
     width: 100%;
@@ -332,3 +406,4 @@ a{
         }
     }
 }
+

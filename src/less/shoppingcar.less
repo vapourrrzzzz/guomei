@@ -1,0 +1,240 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #888;
+    &:hover{
+        color: #f5004b;
+    }
+}
+// 清除浮动
+.clear::after{
+    content: '';
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    clear: both;
+    display: block;
+}
+// 头部
+#header{
+    width: 100%;
+    background-color: #f8f8f8;
+    height: 30px;
+    #login{
+        width: 1170px;
+        height: 30px;
+        margin: 0 auto;
+        // background-color: #f8f8f8;
+        .left{
+            float: left;
+            >a:last-child{
+                color: #f5004b;
+            }
+        }
+        .right{
+            float: right;
+            li{
+                float: left;
+            }
+        }
+        a{
+            display: inline-block;
+            line-height: 30px;
+            padding: 0 15px;
+            font-size: 14px;  
+        }
+    }
+}
+// logo
+#logo{
+    width: 100%;
+    .logo-pic{
+        width: 1170px;
+        margin: 0 auto;
+        height: 120px;
+        margin-top: 33px;
+        >a{
+            display: inline-block;
+            width:125px ;
+            height: 56px;
+            background: url(../img/logo.png) 0 0 no-repeat;
+        }
+        >p{
+            width:135px ;
+            height: 56px;
+            display: inline-block;
+            padding: 0 40px 0 0;
+            background: url(../img/gwc.png) no-repeat;
+        }
+    }
+}
+#shopcar{
+    width: 100%;
+    .shopcar-tab{
+        width: 1170px;
+        margin: 0 auto;
+        // text-align: center;
+        // border: 1px solid #ccc;
+        .shopcar-head{
+            background:#eee;
+            color: #333;
+            height: 46px;
+            font-size: 12px;
+            line-height: 46px;
+            margin-bottom: 10px;
+            a{
+                color: #333;
+                &:hover{
+                    color:#f5004b;
+                }
+            }
+            >p{
+               display: inline-block;
+               width: 100px;
+           }
+           p:nth-child(2){
+               width:500px ;
+           }
+           p:nth-child(4){
+            width: 200px;
+           }
+           p:nth-child(5){
+               width: 130px;
+           }
+        }
+        .shopcar-body{
+            border: 1px solid #ccc;
+            border-bottom: 0;
+            // vertical-align: top;
+            height: 122px;
+            p{  
+                display: inline-block;
+                width: 100px;
+                height:60px ;
+                vertical-align: top;
+                margin-top: 20px;
+            }
+            p:first-child{
+                img{
+                    width: 80px;
+                    border: 1px solid #ccc;
+                    vertical-align: top;
+                    // margin-top: 20px;
+                }
+                input{
+                    margin-top: 0;
+                    vertical-align: top;
+                }
+            }
+            p:nth-child(2){
+                width:500px ;
+            }
+            p:nth-child(4){
+                width: 200px;
+                // text-align: center;
+                >em{
+                    display: inline-block;
+                    border: 1px solid #ccc;
+                    width: 100px;
+                    font-style: normal;
+                    text-align: center;
+                    span{
+                        display: inline-block;
+                        width: 25px;
+                        cursor: pointer;
+                    }
+                    span:first-child{
+                        float: left;
+                        border-right:1px solid #ccc ;
+                    }
+                    span:last-child{
+                        float: right;
+                        border-left: 1px solid #ccc;
+                    }
+                }
+            }
+            p:nth-child(3){
+                font-size: 12px;
+            }
+            p:nth-child(5){
+                font-size: 14px;
+                font-weight: 700;
+                width: 130px;
+            }
+        }
+        .shopcar-body:last-of-type{
+            border-bottom: 1px solid #ccc;
+        }
+    }
+}
+#total{
+    width: 100%;
+    background:#f3f3f3 ;
+    margin-top: 20px;
+    .shopcar-foot{
+        width: 1170px;
+        height:60px ;
+        margin: 0 auto;
+        line-height: 60px;
+        p{
+            display: inline-block;
+            a{
+                color: #333;
+                &:hover{
+                    color: #f5004b;
+                }
+            }
+            .num,.money{
+                color: #f00;
+                font-size: 16px;
+                font-weight: bolder;
+                padding: 0 15px;
+            }
+        }
+        p:nth-child(3){
+            padding-left: 550px ;
+        }
+        .btn{
+            float: right;
+            width: 150px;
+            height: 60px;
+            background: #ccc;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bolder;
+            text-align: center;
+        }
+    }
+}
+#footer{
+    margin-top: 50px;
+    border-top: 1px solid #dd00a7;
+    .statement{
+        width: 1170px;
+        margin: 0 auto;
+        padding-top: 20px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #e6e6e6;
+        // border-top: 1px solid #e6e6e6;
+        p{
+            line-height: 30px;
+            color: #888;
+            >a{
+                display: inline-block;
+                font-size: 14px;
+                color: #666;
+                padding-left: 5px;
+                &:hover{
+                    color: #f5004b;
+                }
+            }
+        }
+    }
+}
