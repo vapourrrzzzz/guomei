@@ -1,18 +1,19 @@
 require.config({
     paths:{
         jquery:'./jquery',
-        detail:'./lib/detail'
+        detail:'./lib/detail',
+        cookie:'./lib/cookie'
     },
     shim:{}
 })
 
-require(['jquery','detail'],function($,detail){
+require(['jquery','detail','cookie'],function($,detail){
     detail.getdata(function(res){
         detail.change(res,function(){
             detail.detail()
         });
         $('.add').on('click',function(){
-            alert(1)
+            detail.addItem(res.id,res.price,$('.number').val());
         })
     })
 })

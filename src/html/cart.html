@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>购物车</title>
+    <link rel="stylesheet" href="../less/cart.css">
+</head>
+
+<body>
+    <header id="header">
+        <!-- 登录 -->
+        <section id="login">
+            <div class="left">
+                <a href="#">国美会员</a>
+                <a href="./login.html">登录</a>
+                <a href="./register.html">注册有礼</a>
+            </div>
+            <ul class="right">
+                <li><a href="">我的订单</a></li>
+                <li><a href="">我的国美</a></li>
+                <li><a href="">企业采购</a></li>
+                <li><a href="">服务中心</a></li>
+                <li><a href="">网站导航</a></li>
+                <li><a href="">手机国美</a></li>
+            </ul>
+        </section>
+    </header>
+    <!-- logo -->
+    <section id="logo">
+        <div class="logo-pic">
+            <a href=""></a>
+            <p></p>
+        </div>
+    </section>
+    <section class="cartMain">
+        <div class="cartMain_hd">
+            <ul class="order_lists cartTop">
+                <li class="list_chk">
+                    <!--所有商品全选-->
+                    <input type="checkbox" id="all" class="whole_check">
+                    <label for="all"></label>
+                    全选
+                </li>
+                <li class="list_con">商品信息</li>
+                <li class="list_price">单价</li>
+                <li class="list_amount">数量</li>
+                <li class="list_sum">金额</li>
+                <li class="list_op">操作</li>
+            </ul>
+        </div>
+
+        <div class="cartBox">
+            <div class="shop_info">
+                <div class="all_check">
+                    <!--店铺全选-->
+                    <input type="checkbox" id="shop_a" class="shopChoice">
+                    <label for="shop_a" class="shop"></label>
+                </div>
+                <div class="shop_name">
+                    店铺：<a href="javascript:;">国美自营</a>
+                </div>
+            </div>
+            <div class="order_content">
+                <ul class="order_lists">
+                    <li class="list_chk">
+                        <input type="checkbox" id="checkbox_2" class="son_check">
+                        <label for="checkbox_2"></label>
+                    </li>
+                    <li class="list_con">
+                        <div class="list_img"><a href="javascript:;"><img src="../img/product/2-2.webp" width="45px"
+                                    alt=""></a></div>
+                        <div class="list_text"><a href="javascript:;">夏季男士迷彩无袖T恤圆领潮流韩版修身男装背心青年时尚打底衫男</a></div>
+                    </li>
+                    <li class="list_price">
+                        <p class="price">￥980</p>
+                    </li>
+                    <li class="list_amount">
+                        <div class="amount_box">
+                            <a href="javascript:;" class="reduce reSty">-</a>
+                            <input type="text" value="1" class="sum">
+                            <a href="javascript:;" class="plus">+</a>
+                        </div>
+                    </li>
+                    <li class="list_sum">
+                        <p class="sum_price">￥980</p>
+                    </li>
+                    <li class="list_op">
+                        <p class="del"><a href="javascript:;" class="delBtn">移除商品</a></p>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+        <!--底部-->
+        <div class="bar-wrapper">
+            <div class="bar-right">
+                <div class="piece">已选商品<strong class="piece_num">0</strong>件</div>
+                <div class="totalMoney">共计: <strong class="total_text">0.00</strong></div>
+                <div class="calBtn"><a href="javascript:;">结算</a></div>
+            </div>
+        </div>
+    </section>
+    <section class="model_bg"></section>
+    <section class="my_model">
+        <p class="title">删除宝贝<span class="closeModel">X</span></p>
+        <p>您确认要删除该宝贝吗？</p>
+        <div class="opBtn"><a href="javascript:;" class="dialog-sure">确定</a><a href="javascript:;"
+                class="dialog-close">关闭</a></div>
+    </section>
+
+    <!-- footer -->
+    <footer id="footer" class="clear">
+        <!-- 声明 -->
+        <div class="statement ">
+            <p>
+                <a href="">国美控股集团</a>
+                <a href="">国美管家</a>
+                <a href="">关于国美</a>
+                <a href="">加入我们</a>
+                <a href="">品牌大全</a>
+                <a href="">商品专题</a>
+                <a href="">热门搜索</a>
+                <a href="">风险监测</a></p>
+            <p>本公司游戏产品适合18岁以上成年人使用 违法和不良信息举报电话：021-39900132 互联网药品信息服务资格证编号（沪）-经营性-2019-0006</p>
+            <p>网络食品销售第三方平台提供者备案：沪网食备A0015号 网络文化经营许可证沪网文[2017]5537-436号 增值电信业务经营许可证</p>
+            <p>客服电话:4008113333 沪ICP备11009419号/京ICP备 19011786号 京B2-20191290 经营执照 营业执照 出版物经营许可证</p>
+            <p>©2000-2019 国美在线电子商务有限公司版权所有 京公网安备 11010502038379号</p>
+        </div>
+    </footer>
+    <script src="../js/require.js" data-main="../js/main.cart.js"></script>
+    <!-- <script src="../js/jquery.js"></script>
+    <script src="../js/carts.js"></script> -->
+</body>
+
+</html>

@@ -1,5 +1,4 @@
 <?php
-
     include('./connetdatabase.php');
 
     $username=$_REQUEST['username'];

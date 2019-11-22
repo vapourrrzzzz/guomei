@@ -1,5 +1,6 @@
 let baseUrl = 'http://localhost:8080/guomei.com';
-define(['jquery',], function ($) {
+
+define(['jquery','cookie'], function ($,cookie) {
     return {
         getdata: function (callback) {
             let id=location.search.split('=')[1];
@@ -13,7 +14,7 @@ define(['jquery',], function ($) {
                 }
             })
         },
-        detail: function (res) {
+        detail: function () {
             var movebox = $('.movebox'),
                 bigpic = $('.bigpic'),
                 small = $('.small'),
@@ -94,7 +95,7 @@ define(['jquery',], function ($) {
             <p>国美价：<span>￥</span><span>${res.price}</span><a href="">降价通知</a></p>
             <p>剩余库存：<em>${res.num}</em></p>
             <p>服务：<b>由国美配送并提供保障监管</b></p>
-            <p> 购买数量： <input type="number" value="1" min="1" max="${res.num}"></p>
+            <p> 购买数量： <input type="number" value="1" min="1" max="${res.num}" class="number"></p>
             <button class="add">加入购物车</button>
         </div>
             `)
@@ -117,6 +118,28 @@ define(['jquery',], function ($) {
                 callback&&callback()
             })
             callback&&callback()
+        },
+        addItem:function(id,price,num){
+            let shop=cookie.get('shop');
+            let product={
+                id:id,
+                price:price,
+                num:num
+            }
+            if(shop){
+                shop=JSON.parse(shop)
+                if(shop.some(elm=>elm.id==id)){
+                    shop.forEach(elm=>{
+                        elm.id==id?elm.num=num:null
+                    })
+                }else{
+                    shop.push(product);
+                }
+            }else{
+                shop=[];
+                shop.push(product);
+            }
+            cookie.set('shop',JSON.stringify(shop))
         }
     }
 });
