@@ -1,6 +1,6 @@
 let baseUrl = 'http://localhost:8080/guomei.com';
 
-define(['jquery'], function () {
+define(['jquery', 'cookie'], function ($, cookie) {
     return {
         cart: function () {
             var $allCheckbox = $('input[type="checkbox"]'),     //全局的全部checkbox
@@ -31,7 +31,7 @@ define(['jquery'], function () {
 
 
             $sonCheckBox.each(function () {
-                $(this).click(function () {
+                $(this).on('click', function () {
                     if ($(this).is(':checked')) {
                         //判断：所有单个商品是否勾选
                         var len = $sonCheckBox.length;
@@ -120,7 +120,7 @@ define(['jquery'], function () {
             var $plus = $('.plus'),
                 $reduce = $('.reduce'),
                 $all_sum = $('.sum');
-            $plus.click(function () {
+            $plus.on('click', function () {
                 var $inputVal = $(this).prev('input'),
                     $count = parseInt($inputVal.val()) + 1,
                     $obj = $(this).parents('.amount_box').find('.reduce'),
@@ -167,7 +167,6 @@ define(['jquery'], function () {
                 totalMoney();
             })
 
-
             var $order_lists = null;
             var $order_content = '';
             $('.delBtn').click(function () {
@@ -189,7 +188,12 @@ define(['jquery'], function () {
                 $('.my_model').fadeOut(300);
             }
             //确定按钮，移除商品
-            $('.dialog-sure').click(function () {
+            $('.dialog-sure').click(function () { 
+                var index=$('.order_lists').index($order_lists)
+                let shop=JSON.parse(cookie.get('shop'))
+                shop.splice(index-1,1)
+                let str=JSON.stringify(shop)
+                cookie.set('shop',str)
                 $order_lists.remove();
                 if ($order_content.html().trim() == null || $order_content.html().trim().length == 0) {
                     $order_content.parents('.cartBox').remove();
@@ -216,8 +220,6 @@ define(['jquery'], function () {
                 $('.total_text').html('￥' + total_money);
                 $('.piece_num').html(total_count);
 
-                // console.log(total_money,total_count);
-
                 if (total_money != 0 && total_count != 0) {
                     if (!calBtn.hasClass('btn_sty')) {
                         calBtn.addClass('btn_sty');
@@ -230,16 +232,45 @@ define(['jquery'], function () {
             }
 
         },
-        render:function($){
-            $.ajax({
-                type: "get",
-                url: ``,
-                data: "data",
-                dataType: "dataType",
-                success: function (response) {
-                    
-                }
+        render: function (callback) {
+            let shopArr = document.cookie.split('=')[1];
+            let shop = JSON.parse(shopArr)
+            let arr = [];
+            let count=0;
+            shop.forEach(value => {
+                count++;
+                let temp = `
+                <ul class="order_lists">
+                <li class="list_chk">
+                    <input type="checkbox" id="checkbox_${count}" class="son_check">
+                    <label for="checkbox_${count}"></label>
+                </li>
+                <li class="list_con">
+                    <div class="list_img"><a href="javascript:;"><img src="${baseUrl}/src${value.src}" width="45px"
+                                alt=""></a></div>
+                    <div class="list_text"><a href="javascript:;">${value.title}</a></div>
+                </li>
+                <li class="list_price">
+                    <p class="price">￥${value.price}</p>
+                </li>
+                <li class="list_amount">
+                    <div class="amount_box">
+                        <a href="javascript:;" class="reduce reSty">-</a>
+                        <input type="text" value="${value.num}" class="sum">
+                        <a href="javascript:;" class="plus">+</a>
+                    </div>
+                </li>
+                <li class="list_sum">
+                    <p class="sum_price">￥${value.price}</p>
+                </li>
+                <li class="list_op">
+                    <p class="del"><a href="javascript:;" class="delBtn">移除商品</a></p>
+                </li>
+                </ul>
+                `
+                $('.order_content').append(temp)
             });
+            callback&&callback();
         }
     }
 })

@@ -1,7 +1,7 @@
 $(function () {
   $(window).scroll(function () {
     //滚动730px，左侧导航固定定位
-    if ($(window).scrollTop() > 580) {
+    if ($(window).scrollTop() > 580&&$(window).scrollTop()<$('#security').offset().top-300) {
       $('.fl_l').css({
         'display': 'block',
         'position': 'fixed',
@@ -32,7 +32,6 @@ $(function () {
     $(this.parentNode).addClass('active');
     $(this.parentNode).siblings().removeClass('active');
     var _i = $('.fl_l>li>a').index(this);
-    console.log($('.fl_l>li>a'))
     var top = $('.fl_r>li').eq(_i).offset().top;
     $('html,body').animate({
       'scrollTop': top

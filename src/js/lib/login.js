@@ -1,6 +1,6 @@
 let baseUrl = "http://localhost:8080/guomei.com";
 
-define(['jquery'],function($){
+define(['jquery','md5'],function($,md5){
     return {
         login:function(selector){
             $(selector).on('click',function(){
@@ -9,7 +9,7 @@ define(['jquery'],function($){
                     type:'post',
                     data:{
                         username:$('#username').val(),
-                        password:$('#password').val()
+                        password:$.md5($('#password').val())
                     },
                     dataType:'json',
                     success:function(res){

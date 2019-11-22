@@ -91,7 +91,7 @@ define(['jquery','cookie'], function ($,cookie) {
         </div>
         <div class="fdj_right">
             <h2>${res.title}</h2>
-            <h3>${res.detail}</h3>
+            <h3>${res.details}</h3>
             <p>国美价：<span>￥</span><span>${res.price}</span><a href="">降价通知</a></p>
             <p>剩余库存：<em>${res.num}</em></p>
             <p>服务：<b>由国美配送并提供保障监管</b></p>
@@ -119,12 +119,14 @@ define(['jquery','cookie'], function ($,cookie) {
             })
             callback&&callback()
         },
-        addItem:function(id,price,num){
+        addItem:function(id,price,num,title,src){
             let shop=cookie.get('shop');
             let product={
                 id:id,
                 price:price,
-                num:num
+                num:num,
+                title:title,
+                src:src
             }
             if(shop){
                 shop=JSON.parse(shop)
@@ -132,12 +134,12 @@ define(['jquery','cookie'], function ($,cookie) {
                     shop.forEach(elm=>{
                         elm.id==id?elm.num=num:null
                     })
-                }else{
+                }else{                   
                     shop.push(product);
                 }
             }else{
                 shop=[];
-                shop.push(product);
+                shop.push(product); 
             }
             cookie.set('shop',JSON.stringify(shop))
         }

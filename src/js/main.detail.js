@@ -13,7 +13,8 @@ require(['jquery','detail','cookie'],function($,detail){
             detail.detail()
         });
         $('.add').on('click',function(){
-            detail.addItem(res.id,res.price,$('.number').val());
+            pic=JSON.parse(res.pic)
+            detail.addItem(res.id,res.price,$('.number').val(),res.title,pic[0].src);
         })
     })
 })

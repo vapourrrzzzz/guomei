@@ -1,9 +1,12 @@
 require.config({
     paths:{
         jquery:'./jquery',
-        login:'./lib/login'
+        login:'./lib/login',
+        md5:'./jquery.md5'
     },
-    shim:{}
+    shim:{
+        md5:['jquery']
+    }
 })
 
 require(['jquery','login'],function($,login){

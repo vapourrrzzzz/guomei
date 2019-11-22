@@ -1,11 +1,14 @@
 require.config({
-    paths:{
-        jquery:'./jquery',
-        product:'./lib/product'
+    paths: {
+        jquery: './jquery',
+        product: './lib/product',
+        lazyload: './lazyload'
     },
-    shim:{}
+    shim: {
+        lazyload:['jquery']
+    }
 })
 
-require(['jquery','product'],function($,product){
+require(['jquery', 'product', 'lazyload'], function ($, product, lazyload) {
     product.getdata()
 })

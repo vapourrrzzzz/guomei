@@ -299,6 +299,7 @@ a:hover{
     width: 100%;
     height: 130px;
     border-bottom: 1px solid #e7e7e7;
+    user-select: none;
 }
 .order_lists:last-child{
     border-bottom: none;
@@ -306,34 +307,42 @@ a:hover{
 .order_lists li{
     float: left;
     height: 100%;
+    user-select: none;
 }
 
 .order_lists .list_chk{
     position: relative;
     width: 50px;
+    user-select: none;
+
 }
 .order_lists .list_chk input[type="checkbox"]{
     position: absolute;
     z-index: 0;
     left: -20px;
     top: -20px;
+    user-select: none;
 }
 .order_lists .list_chk label{
     margin: 20px 0 0 24px;
+    user-select: none;
 }
 
 .order_lists .list_con{
     width: 342px;
+    user-select: none;
 }
 .order_lists .list_con .list_img{
     width: 90px;
     height: 90px;
     margin-top: 20px;
     float: left;
+    user-select: none;
 }
 .order_lists .list_con .list_img img{
     width: 100%;
     vertical-align: top;
+    user-select: none;
 }
 .order_lists .list_con .list_text{
     margin: 20px 0 0 10px;

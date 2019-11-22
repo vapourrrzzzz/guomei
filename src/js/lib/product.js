@@ -2,7 +2,7 @@ let baseUrl = 'http://localhost:8080/guomei.com';
 
 define(['jquery'], function ($) {
     return {
-        getdata: function () {
+        getdata: function (callback) {
             $.ajax({
                 url: `${baseUrl}/lib/product.php`,
                 type: 'post',
@@ -13,14 +13,20 @@ define(['jquery'], function ($) {
                         var obj=JSON.parse(value.pic);
                         temp += `
                         <a href="${baseUrl}/src/html/detail.html?id=${value.id}">
-                            <img src="../${obj[1].src}" alt="${obj[1].title}">
+                            <img class="lazy" data-original="../${obj[1].src}">
+
                             <p>${value.title}</p>
                             <p><span>￥</span>${value.price}</p>
                         </a>`;
                     })
                     $('div.right').append(temp);
+                    $(function() {
+                        $("img.lazy").lazyload({effect: "fadeIn"});
+                    });
                 }
             })
+ 
+            callback&&callback()
         }
     }
 })
